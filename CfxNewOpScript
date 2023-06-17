@@ -1,0 +1,132 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "CfxHub |cxshydomix", HidePremium = false, SaveConfig = true, ConfigFolder = "CfxHub Config"})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "AutoFarm"
+})
+
+Tab:AddButton({
+	Name = "AutoFarm Level/Items [PC]",
+	Callback = function()
+        local LoaderUrl = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/NewLoader.lua"
+        repeat wait() until game:IsLoaded()
+        loadstring(game:HttpGet(LoaderUrl))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "AutoFarm Level/Items [MOBILE]",
+	Callback = function()
+        local LoaderUrl = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/Mobile.lua"
+        repeat wait() until game:IsLoaded()
+        loadstring(game:HttpGet(LoaderUrl))()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Mugen/Dangeon"
+})
+
+Tab:AddButton({
+	Name = "AutoMugen Train [OP]",
+	Callback = function()
+        loadstring(game:HttpGet('https://gist.githubusercontent.com/ogamartv12/7c61669ce5009bded8b64d6389b560ce/raw/710d3f5c0f75879ff9d72d617d86b978b01e6722/VersaceWare.lua', true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "AutoDangeon [OP]",
+	Callback = function()
+        loadstring(game:HttpGet('https://gist.githubusercontent.com/ogamartv12/7c61669ce5009bded8b64d6389b560ce/raw/710d3f5c0f75879ff9d72d617d86b978b01e6722/VersaceWare.lua', true))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Misc Scripts"
+})
+
+Tab:AddButton({
+	Name = "AutoFarm Lilly Flowers [Only 1 Map]",
+	Callback = function()
+        getgenv().TP = true
+        getgenv().speed = 250
+        getgenv().AutoRejoin = true -- Automatically rejoins when you kicke
+         
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/DenizAf4can/SomeScripts/main/Project_Slayers_Lily'))()
+  	end    
+})
+
+Tab:AddSlider({
+	Name = "WalkSpeed",
+	Min = 0,
+	Max = 100,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WalkSpeed",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 169
+	end    
+})
+
+Tab:AddSlider({
+	Name = "JumpPower",
+	Min = 0,
+	Max = 100,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "JumpPower",
+	Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 420
+	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Gui",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "UI"
+})
+
+Tab:AddButton({
+	Name = "DestroyGui",
+	Callback = function()
+        OrionLib:Destroy()
+  	end    
+})
+
+Tab:AddColorpicker({
+	Name = "Colorpicker",
+	Default = Color3.fromRGB(255, 0, 0),
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+
+local Tab = Window:MakeTab({
+	Name = "Credit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Credit Script"
+})
+
+Tab:AddLabel("Credit : cxshy|domix#0001")
